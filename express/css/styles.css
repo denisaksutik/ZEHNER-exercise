@@ -72,7 +72,9 @@ header {
   align-items: center; }
   @media (min-width: 768px) {
     .header-nav {
-      padding: 31px 40px; } }
+      padding: 31px 40px 0; 
+    }
+  }
   .header-nav__mobile {
     background-color: #fff;
     max-height: 100%;
@@ -85,10 +87,41 @@ header {
     padding: 30px 23px;
     z-index: 2;
     overflow: auto; }
+  .header-nav__image-wrap {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    right: 0;
+    top: 0; }
+    .header-nav__image-wrap-descr {
+      color: #636363;
+      font-size: .9rem; }
+    .header-nav__image-wrap img {
+      width: 100%;
+      max-width: 750px; }
   .header-nav__mobile-items:first-child {
     margin-bottom: 65px; }
   .header-nav__mobile-items li {
     margin-bottom: 25px; }
+    .header-nav__mobile-items li a:hover {
+      color: #17A7E0; }
+    @media (min-width: 768px) {
+      .header-nav__mobile-items li:hover .header-nav__image-wrap {
+        opacity: 1;
+        visibility: visible;
+        width: 70%; } }
+  @media (min-width: 768px) {
+    .header-nav--has-submenu:hover .submenu {
+      opacity: 1;
+      visibility: visible;
+      height: auto;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      z-index: 2; } }
+
+@media (min-width: 768px) {
+  .header-nav--has-submenu, .header-nav-group__right {
+    padding-bottom: 30px; } }
 
 .js-drawer-open .header-nav__mobile {
   transition: left .5s;
@@ -101,31 +134,70 @@ header {
   @media (min-width: 1200px) {
     .header-nav-group__right, .header-nav-group__left {
       width: 33.33%; } }
+  @media (max-width: 940px) {
+    .header-nav-group__right, .header-nav-group__left {
+      width: 25%; } }
+  @media (max-width: 550px) {
+    .header-nav-group__right, .header-nav-group__left {
+      width: 40%; } }
 
 .header-nav-group__right {
   justify-content: right; }
   @media (min-width: 768px) {
     .header-nav-group__right {
       justify-content: space-around; } }
+  @media (max-width: 940px) {
+    .header-nav-group__right {
+      width: 37.5%; } }
 
-.header-nav-group__center {
-  width: 20%; }
-  @media (min-width: 1200px) {
-    .header-nav-group__center {
-      width: 33.33%; } }
+@media (min-width: 768px) {
+  .header-nav-group__center {
+    padding-bottom: 18px; } }
+
+@media (min-width: 1200px) {
+  .header-nav-group__center {
+    width: 33.33%; } }
+
+@media (max-width: 940px) {
+  .header-nav-group__center {
+    width: 37.5%; } }
+
+@media (max-width: 550px) {
+  .header-nav-group__center {
+    width: 20%; } }
+
+.header-nav-group ul li:first-child {
+  margin-right: 25px; }
+
+.submenu {
+  background-color: #fff;
+  position: absolute;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  left: 0;
+  top: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .6s;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.05); }
+  .submenu ul {
+    padding-left: 40px;
+    margin-right: 40px; }
 
 .header-nav-link {
   display: flex;
   align-items: center;
   font-weight: 600;
-  margin-left: 25px; }
+  margin-left: 25px;
+  line-height: unset; }
 
 .header-nav-link:first-child {
   margin-left: 0; }
 
 .header-nav-link-icon {
-  height: 20px;
-  width: 20px;
+  height: 24px;
+  width: 24px;
   display: inline-block;
   background-position: center;
   background-repeat: no-repeat; }
@@ -133,7 +205,8 @@ header {
     background-image: url("https://cdn.shopify.com/s/files/1/2613/6868/files/Location.svg?v=1633112489");
     margin-right: 7px; }
   .header-nav-link-icon__search {
-    background-image: url("https://cdn.shopify.com/s/files/1/2613/6868/files/Search.svg?v=1633111747"); }
+    background-image: url("https://cdn.shopify.com/s/files/1/2613/6868/files/Search.svg?v=1633111747");
+    margin-left: 15px; }
   .header-nav-link-icon__account {
     background-image: url("https://cdn.shopify.com/s/files/1/2613/6868/files/Account.svg?v=1633111726"); }
   .header-nav-link-icon__cart {
@@ -171,6 +244,7 @@ header {
   height: 100%;
   position: absolute;
   transition: all .3s ease-in-out;
+  padding: 0 15px;
   width: 100%;
   z-index: 2; }
   .search-box__input {

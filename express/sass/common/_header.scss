@@ -6,7 +6,7 @@ header {
   padding: 27px 18px;
   align-items: center;
   @media (min-width: 768px) {
-    padding: 31px 40px;
+    padding: 31px 40px 0;
   }
   &__mobile {
     background-color: $white;
@@ -21,14 +21,62 @@ header {
     z-index: 2;
     overflow: auto;
   }
+  &__image-wrap {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    &-descr {
+      color: $grey;
+      font-size: .9rem;
+    }
+    img {
+      width: 100%;
+      max-width: 750px;
+    }
+  }
   &__mobile-items {
     &:first-child {
       margin-bottom: 65px;
     }
     li {
       margin-bottom: 25px;
+      a {
+        &:hover {
+          color: #17A7E0;
+        }
+      }
+      @media (min-width: 768px) {
+        &:hover {
+          .header-nav__image-wrap {
+            opacity: 1;
+            visibility: visible;
+            width: 70%;
+          }
+        }
+      }
     }
   }
+  &--has-submenu {
+    @media (min-width: 768px) {
+      &:hover {
+        .submenu {
+          opacity: 1;
+          visibility: visible;
+          height: auto;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          z-index: 2;
+        }
+      }
+    }
+  }
+}
+.header-nav--has-submenu, .header-nav-group__right {
+  @media (min-width: 768px) {
+    padding-bottom: 30px;
+  }  
 }
 .js-drawer-open .header-nav__mobile {
   transition: left .5s;
@@ -42,18 +90,57 @@ header {
     @media (min-width: 1200px) {
       width: 33.33%;
     }
+    @media (max-width: 940px) {
+      width: 25%;
+    }
+    @media (max-width: 550px) {
+      width: 40%;
+    }
   }
   &__right {
     justify-content: right;
     @media (min-width: 768px) {
       justify-content: space-around;
     }
+    @media (max-width: 940px) {
+      width: 37.5%;
+    }
   }
   &__center {
-    width: 20%;
+    @media (min-width: 768px) {
+      padding-bottom: 18px;
+    }
     @media (min-width: 1200px) {
       width: 33.33%;
     }
+    @media (max-width: 940px) {
+      width: 37.5%;
+    }
+    @media (max-width: 550px) {
+      width: 20%;
+    }
+  }
+  ul {
+    li:first-child {
+      margin-right: 25px;
+    }
+  }
+}
+.submenu {
+  background-color: #fff;
+  position: absolute;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  left: 0;
+  top: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .6s;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.05);
+  ul {
+    padding-left: 40px;
+    margin-right: 40px;
   }
 }
 .header-nav-link {
@@ -61,13 +148,14 @@ header {
   align-items: center;
   font-weight: 600;
   margin-left: 25px;
+  line-height: unset;
 }
 .header-nav-link:first-child {
   margin-left: 0;
 }
 .header-nav-link-icon {
-  height: 20px;
-  width: 20px;
+  height: 24px;
+  width: 24px;
   display: inline-block;
   background-position: center;
   background-repeat: no-repeat;
@@ -77,6 +165,7 @@ header {
   }
   &__search {
     background-image: url('https://cdn.shopify.com/s/files/1/2613/6868/files/Search.svg?v=1633111747');
+    margin-left: 15px;
   }
   &__account {
     background-image: url('https://cdn.shopify.com/s/files/1/2613/6868/files/Account.svg?v=1633111726');
@@ -124,6 +213,7 @@ header {
   height: 100%;
   position: absolute;
   transition: all .3s ease-in-out;
+  padding: 0 15px;
   width: 100%;
   z-index: 2;
   &__input {
