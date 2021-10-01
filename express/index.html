@@ -27,12 +27,14 @@
 </head>
 
 <body>
+
   <!-- Announcement Bar -->
   <section class="announcement_bar flex flex-centered">
     <div class="container">
       <span class="announcement_bar__message w-6">Free Shipping on orders over $49</span>
     </div>
   </section>
+
   <!-- Header -->
   <header>
     <div class="flex header-nav container">
@@ -42,7 +44,10 @@
           <a href='#' class="header-nav-link">About 4moms</a>
         </div>
         <div class="flex up-md-hidden">
-          <a href='#' class="header-nav-link up-md-hidden"><span class="header-nav-link-icon header-nav-link-icon__hamburger"></span></a>
+          <div class="header-nav-link up-md-hidden mobile-nav-opener">
+            <span class="header-nav-link-icon header-nav-link-icon__hamburger"></span>
+            <span class="header-nav-link-icon header-nav-link-icon__close"></span>
+          </div>
           <a href='#' class="header-nav-link up-md-hidden"><span class="header-nav-link-icon header-nav-link-icon__account"></span></a>
         </div>
       </div>
@@ -58,11 +63,41 @@
         </div>
         <div class="flex">
           <a href='#' class="header-nav-link"><span class="header-nav-link-icon header-nav-link-icon__search"></span></a>
-          <a href='#' class="header-nav-link up-md-hidden"><span class="header-nav-link-icon header-nav-link-icon__account"></span></a>
+          <a href='#' class="header-nav-link md-hidden"><span class="header-nav-link-icon header-nav-link-icon__account"></span></a>
           <a href='#' class="header-nav-link"><span class="header-nav-link-icon header-nav-link-icon__cart"></span></a>
         </div>
       </div>
     </div>
+    <div class="flex flex-centered search-box">
+      <div class="container w100">
+        <form action="/search" method="get" role="search">
+          <input type="hidden" name="type" value="product">
+          <div class="section relative">
+              <span class="header-nav-link-icon header-nav-link-icon--search header-nav-link-icon__close"></span>
+              <input type="search" name="q" value="" placeholder="Search..." class="search-box__input" aria-label="search">
+              <hr>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="header-nav__mobile">
+      <ul class="header-nav__mobile-items">
+        <li><a>Shop All</a></li>
+        <li><a>Seats</a></li>
+        <li><a>Playards</a></li>
+        <li><a>Feeding</a></li>
+        <li><a>Bassinets</a></li>
+        <li><a>Bath</a></li>
+        <li><a>Mobile</a></li>
+        <li><a>Accessories</a></li>
+        <li><a>Spare Parts</a></li>
+      </ul>
+      <ul class="header-nav__mobile-items">
+        <li><a>About 4moms</a></li>
+        <li><a>Support</a></li>
+      </ul>
+    </div>
   </header>
+  <script src="js/main.js"></script>
 </body>
 </html>
