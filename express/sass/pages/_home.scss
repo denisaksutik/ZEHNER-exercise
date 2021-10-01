@@ -6,3 +6,25 @@
     font-weight: 600;
   }
 }
+.img-with-text {
+  background-color: $light-grey;
+  padding: 17px 30px;
+  @media (min-width: 768px) {
+    padding: 70px 30px;
+  }
+  &__img {
+    img {
+      width: 100%;
+    }
+  }
+  &__copy {
+    max-width: 580px;
+    text-align: center;
+    @media (min-width: 768px) {
+      text-align: right;
+    }
+    p {
+      margin-bottom: 20px;
+    }
+  }
+}
