@@ -3,9 +3,10 @@
     "version": "1.0.0",
     "description": "",
     "scripts": {
-        "start": "node server.js"
+        "start": "node server.js && node-sass express/sass/main.scss express/css/styles.css -w"
     },
     "dependencies": {
-        "express": "^4.17.1"
+        "express": "^4.17.1",
+        "node-sass": "^6.0.1"
     }
 }
