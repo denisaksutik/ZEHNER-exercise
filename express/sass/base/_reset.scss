@@ -2,6 +2,7 @@ html,
 body {
     padding: 0;
     margin: 0;
+    font-family: 'Roboto', sans-serif;
 }
 html {
     -ms-touch-action: manipulation;
@@ -24,12 +25,15 @@ p {
     -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
     text-rendering: optimizeSpeed;
+    letter-spacing: $type_base_spacing;
+    font-family: 'Roboto', sans-serif;
 }
 a {
     letter-spacing: $type_base_spacing;
     line-height: $type_base_line_height;
     color: $font-main;
     text-decoration: none;
+    font-family: 'Roboto', sans-serif;
 }
 ul {
     margin: 0;
