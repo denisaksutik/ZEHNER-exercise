@@ -67,40 +67,57 @@ header {
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05); }
 
 .header-nav {
-  padding: 31px 40px;
+  padding: 27px 18px;
   align-items: center; }
+  @media (min-width: 768px) {
+    .header-nav {
+      padding: 31px 40px; } }
 
-.header-nav-group {
-  width: 33.333%; }
+.header-nav-group__right, .header-nav-group__left {
+  display: flex;
+  width: 40%; }
+  @media (min-width: 1200px) {
+    .header-nav-group__right, .header-nav-group__left {
+      width: 33.33%; } }
+
+.header-nav-group__right {
+  justify-content: right; }
+  @media (min-width: 768px) {
+    .header-nav-group__right {
+      justify-content: space-around; } }
+
+.header-nav-group__center {
+  width: 20%; }
+  @media (min-width: 1200px) {
+    .header-nav-group__center {
+      width: 33.33%; } }
 
 .header-nav-link {
+  display: flex;
+  align-items: center;
   font-weight: 600;
-  margin-left: 43px; }
+  margin-left: 25px; }
 
 .header-nav-link:first-child {
   margin-left: 0; }
 
-.header-nav-link--icon-location::before {
-  background-image: url("https://cdn.shopify.com/s/files/1/2613/6868/files/Location.svg?v=1633112489");
-  left: -25px;
-  bottom: 2px; }
-
-.header-nav-link--icon {
-  position: relative; }
-  .header-nav-link--icon::after, .header-nav-link--icon::before {
-    content: '';
-    height: 18px;
-    width: 18px;
-    position: absolute;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-top: 5px; }
-  .header-nav-link--icon-search::after {
+.header-nav-link-icon {
+  height: 18px;
+  width: 18px;
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat; }
+  .header-nav-link-icon__location {
+    background-image: url("https://cdn.shopify.com/s/files/1/2613/6868/files/Location.svg?v=1633112489");
+    margin-right: 7px; }
+  .header-nav-link-icon__search {
     background-image: url("https://cdn.shopify.com/s/files/1/2613/6868/files/Search.svg?v=1633111747"); }
-  .header-nav-link--icon-account::after {
+  .header-nav-link-icon__account {
     background-image: url("https://cdn.shopify.com/s/files/1/2613/6868/files/Account.svg?v=1633111726"); }
-  .header-nav-link--icon-cart::after {
+  .header-nav-link-icon__cart {
     background-image: url("https://cdn.shopify.com/s/files/1/2613/6868/files/Cart.svg?v=1633111726"); }
+  .header-nav-link-icon__hamburger {
+    background-image: url("https://cdn.shopify.com/s/files/1/2613/6868/files/Hamburger.svg?v=1633118689"); }
 
 .container {
   max-width: 1540px;
@@ -112,6 +129,16 @@ header {
 .flex-centered {
   align-items: center;
   justify-content: center; }
+
+.md-hidden {
+  display: none; }
+  @media (min-width: 768px) {
+    .md-hidden {
+      display: flex; } }
+
+@media (min-width: 768px) {
+  .up-md-hidden {
+    display: none; } }
 
 .announcement_bar {
   background-color: #000;

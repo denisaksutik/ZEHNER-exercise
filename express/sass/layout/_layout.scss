@@ -9,3 +9,14 @@
   align-items: center;
   justify-content: center;
 }
+.md-hidden {
+  display: none;
+  @media (min-width: 768px) {
+    display: flex;
+  }
+}
+.up-md-hidden {
+  @media (min-width: 768px) {
+    display: none;
+  }
+}

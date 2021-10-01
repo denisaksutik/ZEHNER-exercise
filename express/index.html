@@ -33,23 +33,34 @@
       <span class="announcement_bar__message w-6">Free Shipping on orders over $49</span>
     </div>
   </section>
+  <!-- Header -->
   <header>
     <div class="flex header-nav container">
       <div class="header-nav-group header-nav-group__left">
-        <a href='#' class="header-nav-link">Shop</a>
-        <a href='#' class="header-nav-link">About 4moms</a>
+        <div class="md-hidden">
+          <a href='#' class="header-nav-link">Shop</a>
+          <a href='#' class="header-nav-link">About 4moms</a>
+        </div>
+        <div class="flex up-md-hidden">
+          <a href='#' class="header-nav-link up-md-hidden"><span class="header-nav-link-icon header-nav-link-icon__hamburger"></span></a>
+          <a href='#' class="header-nav-link up-md-hidden"><span class="header-nav-link-icon header-nav-link-icon__account"></span></a>
+        </div>
       </div>
-      <div class="header-nav-group header-nav-group__center">
-        <div class="flex flex-centered header-nav__center-logo">
-          <a href="#"><img src="https://cdn.shopify.com/s/files/1/2613/6868/files/logo_4e3f5645-9484-4f1a-81b3-f16a09a95671.svg?v=1633110958" ></a>
+      <div class="flex flex-centered  header-nav-group header-nav-group__center">
+        <div class="header-nav__center-logo">
+          <a href="#" class="flex flex-centered"><img src="https://cdn.shopify.com/s/files/1/2613/6868/files/logo_4e3f5645-9484-4f1a-81b3-f16a09a95671.svg?v=1633110958" ></a>
         </div>
       </div>
       <div class="header-nav-group header-nav-group__right">
-        <a href='#' class="header-nav-link header-nav-link--icon header-nav-link--icon-location">United States</a>
-        <a href='#' class="header-nav-link">Support</a>
-        <a href='#' class="header-nav-link header-nav-link--icon header-nav-link--icon-search"></a>
-        <a href='#' class="header-nav-link header-nav-link--icon header-nav-link--icon header-nav-link--icon-account"></a>
-        <a href='#' class="header-nav-link header-nav-link--icon header-nav-link--icon header-nav-link--icon-cart"></a>
+        <div class="md-hidden">
+          <a href='#' class="header-nav-link"><span class="header-nav-link-icon header-nav-link-icon__location"></span>United States</a>
+          <a href='#' class="header-nav-link">Support</a>
+        </div>
+        <div class="flex">
+          <a href='#' class="header-nav-link"><span class="header-nav-link-icon header-nav-link-icon__search"></span></a>
+          <a href='#' class="header-nav-link up-md-hidden"><span class="header-nav-link-icon header-nav-link-icon__account"></span></a>
+          <a href='#' class="header-nav-link"><span class="header-nav-link-icon header-nav-link-icon__cart"></span></a>
+        </div>
       </div>
     </div>
   </header>
