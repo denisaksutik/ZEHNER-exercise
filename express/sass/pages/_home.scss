@@ -1,3 +1,8 @@
-body {
-  background-color: red;
+.announcement_bar {
+  background-color: $black;
+  height: 40px;
+  &__message {
+    color: $white;
+    font-weight: 600;
+  }
 }
