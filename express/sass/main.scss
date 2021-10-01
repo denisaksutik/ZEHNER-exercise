@@ -1,0 +1,11 @@
+@import "./abstracts/_variables";
+
+//Base
+@import "./base/_reset";
+
+// Common
+@import "./common/_header";
+@import "./common/_footer";
+
+// Pages
+@import "./pages/_home";
