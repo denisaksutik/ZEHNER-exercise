@@ -21,3 +21,6 @@ Node.js Or NPM (Node Package Manager)
 While working in Figma I also noticed that the site is not following consistent standards for example different spacing between icons.
 Another room for improvemnt is in the way of adding pictures: currently the pictures of different sizes are uploaded and then "altered" with frames.
 I think there is a pleanty of ways to make this design cleaner 🙃
+
+## Preview
+https://zehner-exercise.herokuapp.com/
