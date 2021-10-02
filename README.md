@@ -15,8 +15,7 @@ Node.js Or NPM (Node Package Manager)
 
 ## Run a project
 1. npm install
-2. npm run compile:sass
-3. npm start
+2. npm start
 
 ## NOTE
 While working in Figma I also noticed that the site is not following consistent standards for example different spacing between icons.
