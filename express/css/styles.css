@@ -273,7 +273,8 @@ header {
     padding: 10px 20px; }
     .country-selector .country-selector__dropdown li:hover {
       background-color: #000;
-      color: #fff; }
+      color: #fff;
+      margin-right: 0; }
 
 .container {
   max-width: 1540px;
