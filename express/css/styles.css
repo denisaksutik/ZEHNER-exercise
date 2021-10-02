@@ -148,7 +148,8 @@ header {
 
 @media (min-width: 768px) {
   .header-nav-group__center {
-    padding-bottom: 30px; } }
+    padding-bottom: 30px;
+    width: 33.33%; } }
 
 @media (min-width: 1200px) {
   .header-nav-group__center {
@@ -160,7 +161,7 @@ header {
 
 @media (max-width: 550px) {
   .header-nav-group__center {
-    width: 20%; } }
+    width: 100%; } }
 
 .submenu {
   background-color: #fff;
